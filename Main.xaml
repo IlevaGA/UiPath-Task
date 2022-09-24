@@ -1,0 +1,1465 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="944.8,9576" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>UiPath.Activities.System.Arrays</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Activities.Contracts</x:String>
+      <x:String>BalaReva.Excel.Sheets</x:String>
+      <x:String>BalaReva.Excel.Base</x:String>
+      <x:String>BalaReva.EasyExcel.Sheets</x:String>
+      <x:String>BalaReva.EasyExcel.Base</x:String>
+      <x:String>DocumentFormat.OpenXml.Drawing.Charts</x:String>
+      <x:String>DocumentFormat.OpenXml</x:String>
+      <x:String>Advance_Excel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Globalization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
+      <AssemblyReference>BalaReva.Excel</AssemblyReference>
+      <AssemblyReference>BalaReva.Excel.Base</AssemblyReference>
+      <AssemblyReference>BalaReva.EasyExcel</AssemblyReference>
+      <AssemblyReference>DocumentFormat.OpenXml</AssemblyReference>
+      <AssemblyReference>Advance Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap:VirtualizedContainerService.HintSize="630.4,9511.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="pwd" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="588.8,9418.4" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.moex.com">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="555.2,9316" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="s:DateTime" Name="last_month" />
+              <Variable x:TypeArguments="x:String" Name="month" />
+              <Variable x:TypeArguments="x:String" Name="first_day" />
+              <Variable x:TypeArguments="x:String" Name="day" />
+              <Variable x:TypeArguments="x:String" Name="last_day" />
+              <Variable x:TypeArguments="x:String" Name="year" />
+              <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dtExcel" />
+              <Variable x:TypeArguments="x:String" Name="txt" />
+              <Variable x:TypeArguments="x:Int32" Name="numm" />
+              <Variable x:TypeArguments="x:String" Name="countrows" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="513.6,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SVG'" sap:VirtualizedContainerService.HintSize="513.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a6ca2f39-81c2-407f-8c7a-62041cd544bc" InformativeScreenshot="cab919b63f2bc38f45b3858c7c36973f" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;span&amp;gt;button&amp;gt;svg' tag='svg' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  /ru/derivatives/'" sap:VirtualizedContainerService.HintSize="513.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="48be0cbc-7fc8-46f6-a7f1-9aac40e8f028" InformativeScreenshot="63d1c0469bcd68f67ca8acdec0362505" Selector="&lt;webctrl aaname='Срочный рынок' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a' parentid='redesign-2021' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Срочный рынок — Московская Биржа | Рынки" sap:VirtualizedContainerService.HintSize="513.6,525.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="91767bc3-c5e8-4ec3-933b-d89c103b3cdc" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="375.2,308.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="333.6,214.4" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" ScopeIdentifier="91767bc3-c5e8-4ec3-933b-d89c103b3cdc" Version="V1">
+                      <uix:NMouseScroll.SearchedElement>
+                        <uix:SearchedElement>
+                          <uix:SearchedElement.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.moex.com/ru/derivatives/" DesignTimeRectangle="224, 836, 249, 38" ElementType="Text" FriendlyName="'Индикативные курсы'" FullSelectorArgument="&lt;webctrl aaname='                                                     Индикативны*' parentid='ctl00_frmLeftMenuWrap' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                                                     Индикативны*' parentid='ctl00_frmLeftMenuWrap' tag='A' type='' class='new-moex-sidebar-menu__link' check:innerText='Индикативные курсы' /&gt;" Guid="ca9f504c-64dd-402a-8460-1c0a04758e4b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAP0AAAAqCAYAAAB4Dl1rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAASXSURBVHhe7Zi7UiMxEEX3m0lJCXAVhMSujfgHHJIRkpAQEpgfINVKasnql2bGu+sxRvdUqbBlPVrd92psfgUAwFDA9AAMBkwPwGDA9AAMBkwPwGDA9AAMBkwPwGDA9AAMBkwPwGDA9AAMBkwPwGDA9AAMBkwPwGDA9AAMBkwPwGDA9AAMxmlN/7kLm6ursH0t7xWvv6/C1e0u7Mt7AMDpOaPp92F3C9MDsDZnM31+ysfPYHoA1uU8pn/dRsNvwkY/6XP/Npjh6YL4LXv3Txu6NFTbPLUrxJsXe8M2jmsx0TcOPi9BlxKLpZyF9tmE3Wfpr99YDp/xVuYvOpezjrkQ/VgpNhaTfm+gHJh1Sj/tPzU/MZ2351wfb41yznzuVguaR83GRfCayzGdvDDy+njAZNY3PeszhfgWpi+izOtx07YxJNAqaD5et380fWlzF9R/Mb06Y82vqJ1gLm+diyXvU2Njl0zJw6Guom51bTXvoJ1OXhhGaxfI3d1deHh4CF9fX6VH8vHxEW5ubsLz83Pp8VnZ9FIIphDHml4U0YrMzmsi6xrJiWH/2dYkOiLzLrmEs2aOLcWiTC/X1H1T+/6L6W3uEmRAWw9iPm+e0WSfv6+8GGoc+jw0l3LdyQvDi+XSeHx8zJq5v783xk+Gv76+zp+/vb2VXp8VTU+F4SY0hTip6ev+WyaWBBeMjdFQzmSfRpGFpq9m2jrxSeFyYSe8MRHX9CVG1to6Kld6fkWZT7IgbyYf+jy2ZoQc59VfUvaPc0Rjc36C6ROe8bnhX15ect8Uq5k+J33uSZBFVgqmmyq6LaIVEBdLe62FpwXjPdlojognNS1EI/ICNz17zePrCVeu1RF3btr00qx00dT1VK6m8h6bOU9mSd7KmHpGnoeMrRnB+2kNO4bjjCm1EPX/AaZPcOO/v78fZfjEKqbf3Hpfz5xCGFEQ0hwJJaaMFVCdJ/ehcdr0XGBSHBN9Yv/InOnz35YHeS4eR4VinR4T0SZ3TC9jVrlScS2Dx1LWdkzVfiLw/Su2ZgSvkTdPw2NptL3jilprF041fm1LDZ9YxfQpKO9pYQqx1PSuuayA8ry0vyg2F1RCCaas3dbxhNkRohtXJJ8rxSKNNW/6ItxD/P4YY3L9PsNjVmfqxT3JXN4qZa/4s8rG5OU2oi4hmQOPidz9UNMnqvGPMXxinSe9EQLxd6Yv4jUFtAIi0+v1aFzX9BESSxWds18517Gm1/3zpi97z1wMtO+06elMNYZerrw5sq8xl7cGrR3bgpr5mqFxIt8i105eyud1To7hh5n+b1nxH3kWU4hZ0xcTpGJOtLpfm8eZN33bpwi4CujQ9D/hCr3zHnOZiX1S4/O8WCN5X2Y2Ey+1FpdjtkiOR8zpGT6xIG+Vrg6KmVUz50s4Z9I15J/lxupjtDYwpzX9f6cj+gPa0OBb0Ln0ar369QSnAKYHJ2aqZjD9Obgw04OLQXwd7/1MgOnPAUwPTsL+dRe2+Xe297UenBOYHoDBgOkBGAyYHoDBgOkBGAyYHoDBgOkBGAyYHoDBgOkBGAyYHoDBgOkBGIoQ/gCM2qBxbEz39QAAAABJRU5ErkJggg==" InformativeScreenshot="6c9c5cf69227d42a5f3b623163d301b8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Срочный рынок — Московская Биржа | Рынки' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                          </uix:SearchedElement.Target>
+                          <uix:SearchedElement.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:SearchedElement.Timeout>
+                        </uix:SearchedElement>
+                      </uix:NMouseScroll.SearchedElement>
+                    </uix:NMouseScroll>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="2b25410be8d717f3839a843b7de68484.png" Selector="&lt;html app='chrome.exe' title='Срочный рынок — Московская Биржа | Рынки' /&gt;" Url="https://www.moex.com/ru/derivatives/" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  /ru/derivatives/curr...'" sap:VirtualizedContainerService.HintSize="513.6,107.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3da89d00-43ba-4d22-9bcd-05012b610812" InformativeScreenshot="cb88d69d1977b1f3f313b5f9be4aa7ce" Selector="&lt;webctrl aaname='                                                     Индикативны*' parentid='ctl00_frmLeftMenuWrap' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ctl00_PageConte...'" sap:VirtualizedContainerService.HintSize="513.6,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="USD/RUB - Доллар США к российскому рублю">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="32">
+                  <x:String>USD/RUB - Доллар США к российскому рублю</x:String>
+                  <x:String>EUR/RUB - Евро к российскому рублю</x:String>
+                  <x:String>CAD/RUB - Канадский доллар к российскому рублю</x:String>
+                  <x:String>CHF/RUB - Швейцарский франк к российскому рублю</x:String>
+                  <x:String>GBP/RUB - Британский фунт к российскому рублю</x:String>
+                  <x:String>JPY/RUB - Японская йена к российскому рублю</x:String>
+                  <x:String>CNY/RUB - Китайский юань к российскому рублю</x:String>
+                  <x:String>TRY/RUB - Турецкая лира к российскому рублю</x:String>
+                  <x:String>UAH/RUB - Украинская гривна к российскому рублю</x:String>
+                  <x:String>INR/RUB – Индийская рупия к российскому рублю</x:String>
+                  <x:String>HKD/RUB - Гонконгский доллар к российскому рублю</x:String>
+                  <x:String>USD/CAD - Доллар США к канадскому доллару</x:String>
+                  <x:String>USD/CHF - Доллар США к швейцарскому франку</x:String>
+                  <x:String>USD/JPY - Доллар США к японской йене</x:String>
+                  <x:String>USD/CNY - Доллар США к китайскому юаню</x:String>
+                  <x:String>USD/TRY - Доллар США к турецкой лире</x:String>
+                  <x:String>USD/UAH - Доллар США к украинской гривне</x:String>
+                  <x:String>USD/INR - Доллар США к индийской рупии</x:String>
+                  <x:String>USD/HKD - Доллар США к гонконгскому доллару</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="163e410a-cd53-4c83-9ac6-4f3f61fb6144" InformativeScreenshot="2db5e688ddc094e2b359b874bfab5dba" Selector="&lt;webctrl tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <Assign DisplayName="Get last month date" sap:VirtualizedContainerService.HintSize="513.6,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:DateTime">[last_month]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:DateTime">[New system.DateTime(now.Year,now.Month,1).AddDays(-1)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Get value of last day" sap:VirtualizedContainerService.HintSize="513.6,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[last_day]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[Now.AddDays(-now.Day).ToString("dd")]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Get last month" sap:VirtualizedContainerService.HintSize="513.6,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[DateTime.Now.AddMonths(-1).ToString(“MMMM”)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <If Condition="[month =&quot;January&quot;]" DisplayName="If translate month to russian" sap:VirtualizedContainerService.HintSize="513.6,52.8" sap2010:WorkflowViewState.IdRef="If_12">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">Января</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="224.8,68.8" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[month=&quot;February&quot;]" sap:VirtualizedContainerService.HintSize="4379.2,2861.6" sap2010:WorkflowViewState.IdRef="If_11">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">Февраля</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="4031.2,2702.4" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <If Condition="[month=&quot;March&quot;]" sap:VirtualizedContainerService.HintSize="3989.6,2609.6" sap2010:WorkflowViewState.IdRef="If_10">
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">Марта</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap:VirtualizedContainerService.HintSize="3641.6,2450.4" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If Condition="[month=&quot;April&quot;]" sap:VirtualizedContainerService.HintSize="3600,2357.6" sap2010:WorkflowViewState.IdRef="If_9">
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">Апреля</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="3252,2198.4" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <If Condition="[month=&quot;May&quot;]" sap:VirtualizedContainerService.HintSize="3210.4,2105.6" sap2010:WorkflowViewState.IdRef="If_8">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">Мая</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="2862.4,1946.4" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <If Condition="[month=&quot;June&quot;]" sap:VirtualizedContainerService.HintSize="2820.8,1853.6" sap2010:WorkflowViewState.IdRef="If_7">
+                                            <If.Then>
+                                              <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:String">Июня</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                              </Sequence>
+                                            </If.Then>
+                                            <If.Else>
+                                              <Sequence sap:VirtualizedContainerService.HintSize="2472.8,1694.4" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <If Condition="[month=&quot;July&quot;]" sap:VirtualizedContainerService.HintSize="2431.2,1601.6" sap2010:WorkflowViewState.IdRef="If_6">
+                                                  <If.Then>
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:String">Июля</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                    </Sequence>
+                                                  </If.Then>
+                                                  <If.Else>
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="2083.2,1442.4" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <If Condition="[month=&quot;August&quot;]" sap:VirtualizedContainerService.HintSize="2041.6,1349.6" sap2010:WorkflowViewState.IdRef="If_5">
+                                                        <If.Then>
+                                                          <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                                              <Assign.To>
+                                                                <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
+                                                              </Assign.To>
+                                                              <Assign.Value>
+                                                                <InArgument x:TypeArguments="x:String">Августа</InArgument>
+                                                              </Assign.Value>
+                                                            </Assign>
+                                                          </Sequence>
+                                                        </If.Then>
+                                                        <If.Else>
+                                                          <Sequence sap:VirtualizedContainerService.HintSize="1693.6,1190.4" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <If Condition="[month=&quot;September&quot;]" sap:VirtualizedContainerService.HintSize="1652,1097.6" sap2010:WorkflowViewState.IdRef="If_4">
+                                                              <If.Then>
+                                                                <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                  <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                                                    <Assign.To>
+                                                                      <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
+                                                                    </Assign.To>
+                                                                    <Assign.Value>
+                                                                      <InArgument x:TypeArguments="x:String">Сентября</InArgument>
+                                                                    </Assign.Value>
+                                                                  </Assign>
+                                                                </Sequence>
+                                                              </If.Then>
+                                                              <If.Else>
+                                                                <Sequence sap:VirtualizedContainerService.HintSize="1304,938.4" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                  <If Condition="[month=&quot;October&quot;]" sap:VirtualizedContainerService.HintSize="1262.4,845.6" sap2010:WorkflowViewState.IdRef="If_3">
+                                                                    <If.Then>
+                                                                      <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                          </scg:Dictionary>
+                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                        <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                                                          <Assign.To>
+                                                                            <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
+                                                                          </Assign.To>
+                                                                          <Assign.Value>
+                                                                            <InArgument x:TypeArguments="x:String">Октября</InArgument>
+                                                                          </Assign.Value>
+                                                                        </Assign>
+                                                                      </Sequence>
+                                                                    </If.Then>
+                                                                    <If.Else>
+                                                                      <Sequence sap:VirtualizedContainerService.HintSize="914.4,686.4" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                          </scg:Dictionary>
+                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                        <If Condition="[month=&quot;November&quot;]" sap:VirtualizedContainerService.HintSize="872.8,593.6" sap2010:WorkflowViewState.IdRef="If_2">
+                                                                          <If.Then>
+                                                                            <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                </scg:Dictionary>
+                                                                              </sap:WorkflowViewStateService.ViewState>
+                                                                              <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                                                                <Assign.To>
+                                                                                  <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
+                                                                                </Assign.To>
+                                                                                <Assign.Value>
+                                                                                  <InArgument x:TypeArguments="x:String">Ноября</InArgument>
+                                                                                </Assign.Value>
+                                                                              </Assign>
+                                                                            </Sequence>
+                                                                          </If.Then>
+                                                                          <If.Else>
+                                                                            <Sequence sap:VirtualizedContainerService.HintSize="524.8,434.4" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                </scg:Dictionary>
+                                                                              </sap:WorkflowViewStateService.ViewState>
+                                                                              <If Condition="[month=&quot;December&quot;]" sap:VirtualizedContainerService.HintSize="483.2,341.6" sap2010:WorkflowViewState.IdRef="If_1">
+                                                                                <If.Then>
+                                                                                  <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                      </scg:Dictionary>
+                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                    <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                                                                      <Assign.To>
+                                                                                        <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
+                                                                                      </Assign.To>
+                                                                                      <Assign.Value>
+                                                                                        <InArgument x:TypeArguments="x:String">Декабря</InArgument>
+                                                                                      </Assign.Value>
+                                                                                    </Assign>
+                                                                                  </Sequence>
+                                                                                </If.Then>
+                                                                                <If.Else>
+                                                                                  <Sequence sap:VirtualizedContainerService.HintSize="241.6,84.8" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                      </scg:Dictionary>
+                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                  </Sequence>
+                                                                                </If.Else>
+                                                                              </If>
+                                                                            </Sequence>
+                                                                          </If.Else>
+                                                                        </If>
+                                                                      </Sequence>
+                                                                    </If.Else>
+                                                                  </If>
+                                                                </Sequence>
+                                                              </If.Else>
+                                                            </If>
+                                                          </Sequence>
+                                                        </If.Else>
+                                                      </If>
+                                                    </Sequence>
+                                                  </If.Else>
+                                                </If>
+                                              </Sequence>
+                                            </If.Else>
+                                          </If>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </If.Else>
+            </If>
+            <Assign sap:VirtualizedContainerService.HintSize="513.6,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[year]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[DateTime.Now.AddYears(0).ToString(“yyyy”)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Get last month" sap:VirtualizedContainerService.HintSize="513.6,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[first_day]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">1</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  d1day'" sap:VirtualizedContainerService.HintSize="513.6,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="[first_day]">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="32">
+                  <x:String>1</x:String>
+                  <x:String>2</x:String>
+                  <x:String>3</x:String>
+                  <x:String>4</x:String>
+                  <x:String>5</x:String>
+                  <x:String>6</x:String>
+                  <x:String>7</x:String>
+                  <x:String>8</x:String>
+                  <x:String>9</x:String>
+                  <x:String>10</x:String>
+                  <x:String>11</x:String>
+                  <x:String>12</x:String>
+                  <x:String>13</x:String>
+                  <x:String>14</x:String>
+                  <x:String>15</x:String>
+                  <x:String>16</x:String>
+                  <x:String>17</x:String>
+                  <x:String>18</x:String>
+                  <x:String>19</x:String>
+                  <x:String>20</x:String>
+                  <x:String>21</x:String>
+                  <x:String>22</x:String>
+                  <x:String>23</x:String>
+                  <x:String>24</x:String>
+                  <x:String>25</x:String>
+                  <x:String>26</x:String>
+                  <x:String>27</x:String>
+                  <x:String>28</x:String>
+                  <x:String>29</x:String>
+                  <x:String>30</x:String>
+                  <x:String>31</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4436d479-a157-43d2-b3af-52d976b38151" InformativeScreenshot="8b680f565abb095ce0c5cc5fed0c00a7" Selector="&lt;webctrl parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  d1day'" sap:VirtualizedContainerService.HintSize="513.6,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_3" Item="[month]">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="16">
+                  <x:String>Января</x:String>
+                  <x:String>Февраля</x:String>
+                  <x:String>Марта</x:String>
+                  <x:String>Апреля</x:String>
+                  <x:String>Мая</x:String>
+                  <x:String>Июня</x:String>
+                  <x:String>Июля</x:String>
+                  <x:String>Августа</x:String>
+                  <x:String>Сентября</x:String>
+                  <x:String>Октября</x:String>
+                  <x:String>Ноября</x:String>
+                  <x:String>Декабря</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4436d479-a157-43d2-b3af-52d976b38151" InformativeScreenshot="ff83cc47ea1b30a1505128841126dae8" Selector="&lt;webctrl parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl id='d1month' tableRow='1' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  d1day'" sap:VirtualizedContainerService.HintSize="513.6,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_4" Item="[year]">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="16">
+                  <x:String>2009</x:String>
+                  <x:String>2010</x:String>
+                  <x:String>2011</x:String>
+                  <x:String>2012</x:String>
+                  <x:String>2013</x:String>
+                  <x:String>2014</x:String>
+                  <x:String>2015</x:String>
+                  <x:String>2016</x:String>
+                  <x:String>2017</x:String>
+                  <x:String>2018</x:String>
+                  <x:String>2019</x:String>
+                  <x:String>2020</x:String>
+                  <x:String>2021</x:String>
+                  <x:String>2022</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4436d479-a157-43d2-b3af-52d976b38151" InformativeScreenshot="998070fe4b0a530a5ea8f433a2b7f6b5" Selector="&lt;webctrl parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl id='d1year' tableRow='1' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  d1day'" sap:VirtualizedContainerService.HintSize="513.6,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_5" Item="[last_day]">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="32">
+                  <x:String>1</x:String>
+                  <x:String>2</x:String>
+                  <x:String>3</x:String>
+                  <x:String>4</x:String>
+                  <x:String>5</x:String>
+                  <x:String>6</x:String>
+                  <x:String>7</x:String>
+                  <x:String>8</x:String>
+                  <x:String>9</x:String>
+                  <x:String>10</x:String>
+                  <x:String>11</x:String>
+                  <x:String>12</x:String>
+                  <x:String>13</x:String>
+                  <x:String>14</x:String>
+                  <x:String>15</x:String>
+                  <x:String>16</x:String>
+                  <x:String>17</x:String>
+                  <x:String>18</x:String>
+                  <x:String>19</x:String>
+                  <x:String>20</x:String>
+                  <x:String>21</x:String>
+                  <x:String>22</x:String>
+                  <x:String>23</x:String>
+                  <x:String>24</x:String>
+                  <x:String>25</x:String>
+                  <x:String>26</x:String>
+                  <x:String>27</x:String>
+                  <x:String>28</x:String>
+                  <x:String>29</x:String>
+                  <x:String>30</x:String>
+                  <x:String>31</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4436d479-a157-43d2-b3af-52d976b38151" InformativeScreenshot="b9dd980033675b24f4b0f272b64e8b75" Selector="&lt;webctrl idx='2' parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  d1day'" sap:VirtualizedContainerService.HintSize="513.6,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_6" Item="[month]">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="16">
+                  <x:String>Января</x:String>
+                  <x:String>Февраля</x:String>
+                  <x:String>Марта</x:String>
+                  <x:String>Апреля</x:String>
+                  <x:String>Мая</x:String>
+                  <x:String>Июня</x:String>
+                  <x:String>Июля</x:String>
+                  <x:String>Августа</x:String>
+                  <x:String>Сентября</x:String>
+                  <x:String>Октября</x:String>
+                  <x:String>Ноября</x:String>
+                  <x:String>Декабря</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4436d479-a157-43d2-b3af-52d976b38151" InformativeScreenshot="9bfa045755f069dcb5049a729475dc82" Selector="&lt;webctrl idx='2' parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl id='d2month' tableRow='1' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  d1day'" sap:VirtualizedContainerService.HintSize="513.6,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_7" Item="[year]">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="16">
+                  <x:String>2009</x:String>
+                  <x:String>2010</x:String>
+                  <x:String>2011</x:String>
+                  <x:String>2012</x:String>
+                  <x:String>2013</x:String>
+                  <x:String>2014</x:String>
+                  <x:String>2015</x:String>
+                  <x:String>2016</x:String>
+                  <x:String>2017</x:String>
+                  <x:String>2018</x:String>
+                  <x:String>2019</x:String>
+                  <x:String>2020</x:String>
+                  <x:String>2021</x:String>
+                  <x:String>2022</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4436d479-a157-43d2-b3af-52d976b38151" InformativeScreenshot="3a6455282c900415ca6abef2ee9362fb" Selector="&lt;webctrl idx='2' parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl id='d2year' tableRow='1' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="513.6,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="258e7d37-b2e1-4506-878d-df06c21c34ce" InformativeScreenshot="10b1fccb0d9f4f3116c1cbeba8068d95" Selector="&lt;webctrl tag='INPUT' type='submit' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Индикативные курсы валют — Московская Биржа | Рынки" sap:VirtualizedContainerService.HintSize="513.6,624.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="ca62c815-4614-4423-9f82-fded7a3c628c" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="375.2,408" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Дата' ReferenceIdx='0' Name='Дата USD/RUB'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Курс промежуточного клиринга Значение' ReferenceIdx='1' Name='Курс промежуточного клиринга Значение' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Курс промежуточного клиринга Время' ReferenceIdx='2' Name='Курс промежуточного клиринга Время' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Курс основного клиринга Значение' ReferenceIdx='3' Name='Курс USD/RUB'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator=',' ThousandsSeparator='.' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Курс основного клиринга Время' ReferenceIdx='4' Name='Время USD/RUB'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Дата' attr='text' /&gt;&lt;column name='Курс промежуточного клиринга Значение' attr='text' /&gt;&lt;column name='Курс промежуточного клиринга Время' attr='text' /&gt;&lt;column name='Курс основного клиринга Значение' attr='text' /&gt;&lt;column name='Курс основного клиринга Время' attr='text' /&gt;&lt;/extract-table&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_5" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="ca62c815-4614-4423-9f82-fded7a3c628c" Version="V1">
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="832, 844, 546, 719" FriendlyName="'Дата Курс'" FullSelectorArgument="&lt;webctrl aaname='Дата Курс промежуточного клиринга Курс основного клиринга Значен*' parentid='currency-rate-container' tag='TABLE' /&gt;" Guid="f299efe7-1cd3-4aec-a0ee-c8cc9b99b116" InformativeScreenshot="edb4aa15d5f868085287504c0e342dae.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                      </uix:NExtractData.Target>
+                    </uix:NExtractData>
+                    <ui:WriteRange AddHeaders="True" DataTable="[ExtractDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Лист1" StartingCell="A1" WorkbookPath="C:\Users\Галинушка\Desktop\Test.xlsx">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:WriteRange>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="d0429fd2452ad8e75304f11e8f25c71b.png" Selector="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" Url="https://www.moex.com/ru/derivatives/currency-rate.aspx?currency=USD_RUB" />
+              </uix:NApplicationCard.TargetApp>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NApplicationCard>
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Индикативные курсы валют — Московская Биржа | Рынки" sap:VirtualizedContainerService.HintSize="513.6,1896" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="f39693c4-cae3-4db1-a569-96c39a4af67c" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence sap:VirtualizedContainerService.HintSize="416.8,1679.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="375.2,1584.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NSelectItem DisplayName="Select Item 'Выберите валюты'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="JPY/RUB - Японская йена к российскому рублю" ScopeIdentifier="f39693c4-cae3-4db1-a569-96c39a4af67c" Version="V1">
+                        <uix:NSelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="19">
+                            <x:String>USD/RUB - Доллар США к российскому рублю</x:String>
+                            <x:String>EUR/RUB - Евро к российскому рублю</x:String>
+                            <x:String>CAD/RUB - Канадский доллар к российскому рублю</x:String>
+                            <x:String>CHF/RUB - Швейцарский франк к российскому рублю</x:String>
+                            <x:String>GBP/RUB - Британский фунт к российскому рублю</x:String>
+                            <x:String>JPY/RUB - Японская йена к российскому рублю</x:String>
+                            <x:String>CNY/RUB - Китайский юань к российскому рублю</x:String>
+                            <x:String>TRY/RUB - Турецкая лира к российскому рублю</x:String>
+                            <x:String>UAH/RUB - Украинская гривна к российскому рублю</x:String>
+                            <x:String>INR/RUB – Индийская рупия к российскому рублю</x:String>
+                            <x:String>HKD/RUB - Гонконгский доллар к российскому рублю</x:String>
+                            <x:String>USD/CAD - Доллар США к канадскому доллару</x:String>
+                            <x:String>USD/CHF - Доллар США к швейцарскому франку</x:String>
+                            <x:String>USD/JPY - Доллар США к японской йене</x:String>
+                            <x:String>USD/CNY - Доллар США к китайскому юаню</x:String>
+                            <x:String>USD/TRY - Доллар США к турецкой лире</x:String>
+                            <x:String>USD/UAH - Доллар США к украинской гривне</x:String>
+                            <x:String>USD/INR - Доллар США к индийской рупии</x:String>
+                            <x:String>USD/HKD - Доллар США к гонконгскому доллару</x:String>
+                          </scg:List>
+                        </uix:NSelectItem.Items>
+                        <uix:NSelectItem.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.moex.com/ru/derivatives/currency-rate.aspx?currency=USD_RUB" DesignTimeRectangle="941, 455, 472, 24" ElementType="DropDown" FriendlyName="'USD/RUB -'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' class='' aaname='' /&gt;" Guid="bc7a620a-0db1-414f-9079-dc7b6fa08db8" ImageBase64="" InformativeScreenshot="927aaf5e483e87bb11177a8d9782ad77.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" SearchSteps="Selector" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="765, 455, 170, 19" ElementType="Text" FriendlyName="'Выберите валюты'" FullSelectorArgument="&lt;webctrl aaname='Выберите валюты:' parentid='currency-rate-container' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Выберите валюты:' parentid='currency-rate-container' tag='DIV' type='' class='col-md-7 margin-b-10' check:innerText='Выберите валюты:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAK4AAAAXCAYAAACSyXRTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALISURBVGhD7ZdtbvMgEITfO+VcyVWs3iQ9SZVjVModeAPLxzI7uLZbqaHZkfhhwLA7+4CTf8HlmlAOrmtKObiuKeXguqaUg+uaUg6ua0o5uK4ptQ3cz2u4nE7hVNslXD/z2E8p7nG+hnt+dLnWtAPcJdzy4/39IgC/lZ5jur3pw3AKl3fH1rVNh8BN+lgesEHfDiVo/YZ1HdTPgbsK8i0s3c8LfB7pHq7nciPj/DgW++JaZQ7uz/ZpffXLgU1/SVJepN9IxyFt+chDVTofMm5+ksXWckrxQgxdDmpsPTeJY/SFw33is83ld3UQ3FwkbeIecON65yUsqojN1CLZo5qbi9oMLBC0PeWnB8YJ4KZ1GMwWJCk+rD/8SuBeED8+szjQZ/AUgerjyX50Hkax3PaAK+8/29fx4J8zksgecPMt1pvZG4xFikp9UKj1gsC+pQibwMV3o9i8Ijuf5dBE4NkDLs6NYoeBxrwH3OfUN38qKJMyjH0r70BRB5CnGyQbJrcna+U9Bm6/Rr9vKaAFrI3lxyh2WHPjBYd18/s0vtFa6PMauHHM3ILME5Jbnqfj0LH8bXDx1BIYG0RQVGq6Nmz9RhDtAVevB7EkkeIODtdYssYIhjpeYyM5oi8QQ/JHr/9NcLu9U43Fl5cAtyY4AjeZC7DQ9WR+MbMHkIkVCQsi+15I35fgqkJuE1lXe4JQmlgzMF+Bu+L35tzI3pKvzPvb4CbjlCHGSDFMzEFDAfqo9L6aw8CJc2phLbhyI9kY+iJsLe6j1xweu2cTWVd7YvxBeAhM8E4PlMS8Cn4Sy83upb1DcPWF8iw6/ucMzUgmw5zOZA6Lnm+AMGvawo/Ho0b7bgOX7TEuoM0nNr1mOgh1TH0Jqr8Q/yq4D5m6YP5RLDfmXfOEHRB7IH5X28B9Son5FjbXK8jBdU0pB9c1pSYG1/XKcnBdEyqE/055FsIvQugNAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NSelectItem.Target>
+                      </uix:NSelectItem>
+                      <uix:NSelectItem DisplayName="Select Item '20'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[first_day]" ScopeIdentifier="f39693c4-cae3-4db1-a569-96c39a4af67c" Version="V1">
+                        <uix:NSelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="31">
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                            <x:String>6</x:String>
+                            <x:String>7</x:String>
+                            <x:String>8</x:String>
+                            <x:String>9</x:String>
+                            <x:String>10</x:String>
+                            <x:String>11</x:String>
+                            <x:String>12</x:String>
+                            <x:String>13</x:String>
+                            <x:String>14</x:String>
+                            <x:String>15</x:String>
+                            <x:String>16</x:String>
+                            <x:String>17</x:String>
+                            <x:String>18</x:String>
+                            <x:String>19</x:String>
+                            <x:String>20</x:String>
+                            <x:String>21</x:String>
+                            <x:String>22</x:String>
+                            <x:String>23</x:String>
+                            <x:String>24</x:String>
+                            <x:String>25</x:String>
+                            <x:String>26</x:String>
+                            <x:String>27</x:String>
+                            <x:String>28</x:String>
+                            <x:String>29</x:String>
+                            <x:String>30</x:String>
+                            <x:String>31</x:String>
+                          </scg:List>
+                        </uix:NSelectItem.Items>
+                        <uix:NSelectItem.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.moex.com/ru/derivatives/currency-rate.aspx?currency=JPY_RUB" DesignTimeRectangle="871, 421, 48, 25" ElementType="DropDown" FriendlyName="'20'" FullSelectorArgument="&lt;webctrl parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='' aaname='' /&gt;" Guid="ed895e90-e735-49c3-a741-3af905c79a26" ImageBase64="" InformativeScreenshot="e72aef517ce54074996a01659780ca42.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                        </uix:NSelectItem.Target>
+                      </uix:NSelectItem>
+                      <uix:NSelectItem DisplayName="Select Item 'Августа'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="[month]" ScopeIdentifier="f39693c4-cae3-4db1-a569-96c39a4af67c" Version="V1">
+                        <uix:NSelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="12">
+                            <x:String>Января</x:String>
+                            <x:String>Февраля</x:String>
+                            <x:String>Марта</x:String>
+                            <x:String>Апреля</x:String>
+                            <x:String>Мая</x:String>
+                            <x:String>Июня</x:String>
+                            <x:String>Июля</x:String>
+                            <x:String>Августа</x:String>
+                            <x:String>Сентября</x:String>
+                            <x:String>Октября</x:String>
+                            <x:String>Ноября</x:String>
+                            <x:String>Декабря</x:String>
+                          </scg:List>
+                        </uix:NSelectItem.Items>
+                        <uix:NSelectItem.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.moex.com/ru/derivatives/currency-rate.aspx?currency=JPY_RUB" DesignTimeRectangle="926, 421, 96, 25" ElementType="DropDown" FriendlyName="'Августа'" FullSelectorArgument="&lt;webctrl parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl id='d1month' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl id='d1month' type='' tag='SELECT' class='' aaname='' /&gt;" Guid="343e7ad0-0330-431e-bc61-7a4432b3a520" ImageBase64="" InformativeScreenshot="083ecfe558c257e33ece4f39d792fd5a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                        </uix:NSelectItem.Target>
+                      </uix:NSelectItem>
+                      <uix:NSelectItem DisplayName="Select Item '2022'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="[year]" ScopeIdentifier="f39693c4-cae3-4db1-a569-96c39a4af67c" Version="V1">
+                        <uix:NSelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="14">
+                            <x:String>2009</x:String>
+                            <x:String>2010</x:String>
+                            <x:String>2011</x:String>
+                            <x:String>2012</x:String>
+                            <x:String>2013</x:String>
+                            <x:String>2014</x:String>
+                            <x:String>2015</x:String>
+                            <x:String>2016</x:String>
+                            <x:String>2017</x:String>
+                            <x:String>2018</x:String>
+                            <x:String>2019</x:String>
+                            <x:String>2020</x:String>
+                            <x:String>2021</x:String>
+                            <x:String>2022</x:String>
+                          </scg:List>
+                        </uix:NSelectItem.Items>
+                        <uix:NSelectItem.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.moex.com/ru/derivatives/currency-rate.aspx?currency=JPY_RUB" DesignTimeRectangle="1029, 421, 66, 25" ElementType="DropDown" FriendlyName="'2022'" FullSelectorArgument="&lt;webctrl parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl id='d1year' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl id='d1year' type='' tag='SELECT' class='' aaname='' /&gt;" Guid="48f0b140-34cd-47d9-9cbe-5062f2d4574b" InformativeScreenshot="c7b42305ae29f9c5fc19a2d506a8502a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                        </uix:NSelectItem.Target>
+                      </uix:NSelectItem>
+                      <uix:NSelectItem DisplayName="Select Item '20'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="[last_day]" ScopeIdentifier="f39693c4-cae3-4db1-a569-96c39a4af67c" Version="V1">
+                        <uix:NSelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="31">
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                            <x:String>6</x:String>
+                            <x:String>7</x:String>
+                            <x:String>8</x:String>
+                            <x:String>9</x:String>
+                            <x:String>10</x:String>
+                            <x:String>11</x:String>
+                            <x:String>12</x:String>
+                            <x:String>13</x:String>
+                            <x:String>14</x:String>
+                            <x:String>15</x:String>
+                            <x:String>16</x:String>
+                            <x:String>17</x:String>
+                            <x:String>18</x:String>
+                            <x:String>19</x:String>
+                            <x:String>20</x:String>
+                            <x:String>21</x:String>
+                            <x:String>22</x:String>
+                            <x:String>23</x:String>
+                            <x:String>24</x:String>
+                            <x:String>25</x:String>
+                            <x:String>26</x:String>
+                            <x:String>27</x:String>
+                            <x:String>28</x:String>
+                            <x:String>29</x:String>
+                            <x:String>30</x:String>
+                            <x:String>31</x:String>
+                          </scg:List>
+                        </uix:NSelectItem.Items>
+                        <uix:NSelectItem.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.moex.com/ru/derivatives/currency-rate.aspx?currency=JPY_RUB" DesignTimeRectangle="1130, 421, 48, 25" ElementType="DropDown" FriendlyName="'20'" FullSelectorArgument="&lt;webctrl idx='2' parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='' aaname='' /&gt;" Guid="b129c2aa-e4db-433b-9747-783e92939382" ImageBase64="" InformativeScreenshot="04cef038fd08864163ce96fe76385537.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                        </uix:NSelectItem.Target>
+                      </uix:NSelectItem>
+                      <uix:NSelectItem DisplayName="Select Item 'Сентября'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_6" Item="[month]" ScopeIdentifier="f39693c4-cae3-4db1-a569-96c39a4af67c" Version="V1">
+                        <uix:NSelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="12">
+                            <x:String>Января</x:String>
+                            <x:String>Февраля</x:String>
+                            <x:String>Марта</x:String>
+                            <x:String>Апреля</x:String>
+                            <x:String>Мая</x:String>
+                            <x:String>Июня</x:String>
+                            <x:String>Июля</x:String>
+                            <x:String>Августа</x:String>
+                            <x:String>Сентября</x:String>
+                            <x:String>Октября</x:String>
+                            <x:String>Ноября</x:String>
+                            <x:String>Декабря</x:String>
+                          </scg:List>
+                        </uix:NSelectItem.Items>
+                        <uix:NSelectItem.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.moex.com/ru/derivatives/currency-rate.aspx?currency=JPY_RUB" DesignTimeRectangle="1185, 421, 96, 25" ElementType="DropDown" FriendlyName="'Сентября'" FullSelectorArgument="&lt;webctrl idx='2' parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl id='d2month' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl id='d2month' type='' tag='SELECT' class='' aaname='' /&gt;" Guid="742c8236-11c4-48e5-9ee6-db54926ad49a" ImageBase64="" InformativeScreenshot="4e42aea0c2d7643cf759e510e1d76d0c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                        </uix:NSelectItem.Target>
+                      </uix:NSelectItem>
+                      <uix:NSelectItem DisplayName="Select Item '2022'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_7" Item="[year]" ScopeIdentifier="f39693c4-cae3-4db1-a569-96c39a4af67c" Version="V1">
+                        <uix:NSelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="14">
+                            <x:String>2009</x:String>
+                            <x:String>2010</x:String>
+                            <x:String>2011</x:String>
+                            <x:String>2012</x:String>
+                            <x:String>2013</x:String>
+                            <x:String>2014</x:String>
+                            <x:String>2015</x:String>
+                            <x:String>2016</x:String>
+                            <x:String>2017</x:String>
+                            <x:String>2018</x:String>
+                            <x:String>2019</x:String>
+                            <x:String>2020</x:String>
+                            <x:String>2021</x:String>
+                            <x:String>2022</x:String>
+                          </scg:List>
+                        </uix:NSelectItem.Items>
+                        <uix:NSelectItem.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.moex.com/ru/derivatives/currency-rate.aspx?currency=JPY_RUB" DesignTimeRectangle="1288, 421, 66, 25" ElementType="DropDown" FriendlyName="'2022'" FullSelectorArgument="&lt;webctrl idx='2' parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl id='d2year' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl id='d2year' type='' tag='SELECT' class='' aaname='' /&gt;" Guid="3362298c-0aba-44fa-8530-9ac8d78e9f13" InformativeScreenshot="56dd821cdd1a01116bc0bace1c98e28a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                        </uix:NSelectItem.Target>
+                      </uix:NSelectItem>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a6deac57-f05c-4199-8afc-bbc20a95126b" InformativeScreenshot="10b1fccb0d9f4f3116c1cbeba8068d95" Selector="&lt;webctrl tag='INPUT' type='submit' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                    </Sequence>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="05b262f11923b2bfeaf7390e0f08cd0d.png" Selector="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" Url="https://www.moex.com/ru/derivatives/currency-rate.aspx?currency=USD_RUB" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="513.6,624.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" ScopeGuid="3afcdbe6-6d52-4f2b-a814-26fdd113852b" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="375.2,408" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Дата' ReferenceIdx='0' Name='Дата JPY/RUB'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Курс промежуточного клиринга Значение' ReferenceIdx='1' Name='Курс промежуточного клиринга Значение' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Курс промежуточного клиринга Время' ReferenceIdx='2' Name='Курс промежуточного клиринга Время' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Курс основного клиринга Значение' ReferenceIdx='3' Name='Курс JPY/RUB'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator=',' ThousandsSeparator='.' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Курс основного клиринга Время' ReferenceIdx='4' Name='Время JPY/RUB'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Дата' attr='text' /&gt;&lt;column name='Курс промежуточного клиринга Значение' attr='text' /&gt;&lt;column name='Курс промежуточного клиринга Время' attr='text' /&gt;&lt;column name='Курс основного клиринга Значение' attr='text' /&gt;&lt;column name='Курс основного клиринга Время' attr='text' /&gt;&lt;/extract-table&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_8" LimitExtractionTo="Rows" MaximumResults="0" Version="V1">
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="832, 844, 546, 719" FriendlyName="'Дата Курс'" FullSelectorArgument="&lt;webctrl aaname='Дата Курс промежуточного клиринга Курс основного клиринга Значен*' parentid='currency-rate-container' tag='TABLE' /&gt;" Guid="d2d404c0-7b41-482b-ad2a-ee0f6cdc97ad" InformativeScreenshot="9b29886bab6db367aea1ccf6f58cbf17.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                      </uix:NExtractData.Target>
+                    </uix:NExtractData>
+                    <ui:WriteRange AddHeaders="True" DataTable="[ExtractDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="Лист1" StartingCell="D1" WorkbookPath="C:\Users\Галинушка\Desktop\Test.xlsx" />
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAsaSURBVFhH3ZhpUFXnGceFsKiAqHFF9vUCd+FyEZUdcQEESaJpvyR12mlNJ6ZJJ2mzGGsWjSamIsaVqLluMW2SZvIhq6KAuCY1Ghs6U6TKFgmCF3EDzrnvM/0/7zl3MRrHpMmXvDO/eRbOvc/vvOeec4EhP9uVFDTU1xISNCItZHikJWS4AdGCaEO0IZq5B6LAKD5Wf9lPv1KDhgUtCBubczrbtLCrYHJV1/SM+q5CWzPo+6bQ5uwqSFcRHaAZNIDqL7NMD/8qbEwmXjtCf5sffwX4+PisTozK/dhm2IShjRC69k1hukBOTGcBg1oic+rM1ylIHzyfb/3iQ2uSvTIxci7e68fd0e3G6HG1k5PtkGiD1ECnFJKDhR4JApCxCg2uNbjmnwGOyvk8a+cBW5Kd31N/+x++cJo+m5JjSjHojNcw74GEgYz42h3TSAN5rqwRJeSJFvF1juXMhqToUp6hj/t+K/gu34BlceHzMfQ/upAmpYmwhCbDA/X8PAQ6UHfkWlwyWp0DIe4hIpe1TtMLsWHzeZY+9s4Wn9WLsZPmnc9La+Sd8EgBDGQRTYAHazvDIlzrgzUJ1O1a7obr9mxXNFNHtrnxhZiJ877XTvLWd+RamzQJ3hEXGMIi+nANuUPeuAUhISABNBk3WSbRhqhhorYsU9PahIhSffztl90YMw5STRjMw1nCLebaDT3K3XH3eLAePcMloj3LLNqyWEyCHILIEd20ZJnOvJ446fY3jo+/712fZhjewSDt7LWBvAvugVx75/K4fJvoKMqkjqIpon3GVGpH3j49g9oLcVKFJka0FwCOoK1A9ohjW4ERtZEj1UyOtw/FM0jXuXlFLrRWvPpYXicLeYlo0euMW3kH+FLfX0o9Ly6mawc+pcH2VhKqSiScRAPd5OzZR+p/l5N6soLUY1bh5mgasJJE1rKHWtK25dmIHF3nxjUsMnRE0rJ8+4zqMrW2AmcvL4NbiKNom4Y4jc84Q3SvWEr9/zxOav8AXehz0skWhWr/PUh7/zVAp1oV6r0miJfz0ufkbFpM6vEpupyF1CNppBxBPGYRzqMWoSKX9VHL4JFtcZssCUODdS3PGlMUk2V9857T1t330AOvzKbmXJNohUwrpDQ450uRIRxVq4R6sYcGsWHvfd5Pj+y8TPev66OSVy/RrFWX6BfI//zWFXr3swEaUGA52EPOc3jN8UzImCHImIRyxAQpE3omCCKXtfGrh+4dfeMuBk4K8TWuL1mUtqtCAWTbXi52PThFtEw1Slq1SK1TU8WF554SSk8PXel3QuIq5S3vJdvSm8l4rpdy8TM+5iqOFYMXSW1eCgneQSOkjBA0Ik/lnHukHk7l+mrXvpSFpvhAz9fhsJjQUZYdc6vNO+eSRUPcs2a2OFloFuempJBGquiYX0LXTxzHrgh6Ys8Vsv7FIUnXcdXecP+JPZex24LEpWOknCgW6uEUyCQjSpCnyKjIHLEhqcpmGOr5xQKCUebt5Q3mHXPJvKOcTDvKxOStZfTyohzRNA1ymQCXt3vl8/Jz9c7xfspa5qC0JQACjJVzb1x9kI1j/4GPglMdINH0tHBKMQNkJJyDJAhqqIcT6yEYqetJQYNpe3kzJMm0vYwRTMWrM8W+OWnibGYyncu2iCs1n1DvVUGP67tngcidwMIP77hMXbiZRPcnwsmXmEUOSYR6KNEFBBOFcjih2WYITNL1IBgdajbZyx1G+xwy2cvICDnkwvLGHLH00WzRmJVCZ/PShdrdLe/W+17rJfOSixKLO7KMp+eScx1379peOoHXiust+JyZSTmUADkX8QwE3fESBC26nhS0Gd+Y4wQkgZyei6mbikXNLLM4m2/DI85JH58eoIIVDjI9qw3m6MLslX+7N+PlXtrfOIjnpApBPFYa4iTqoTgIyQhihdoQy7kTgjZdTxNM2VbqBJQKUraWEOdApGwrod8tzhNN+elCOFU5pOgVBxkXX9Tp0XHVt+7nv+SQJ8eCTn7ENMRAJhoRHIwh5G6UhigIBngEh0aHWiDSBzEI6YIaIlmD7Auy8W3RQifOKTR3jYNSMTQVAjdz634FLvEXfIn724hvEuVgFKlAORip5Q1Rgmv1YCT3HBA063oQjApNgkRz8pZiKZO8BWwtJsPWYmHgHupZVSXUengffXPJSQvtfXJoyi1IfsYTk/UeH/vY7su4wXCTXPgAOxcPqQjIREDGDQTDGVLqw3GT+Bt0PRYcEQmhehaEEAQh9zrYMlsgojdbpEJy1QcrRb8ySG9/1k8Zz+sSuog798KgRxuO/dux6/IR5Wx6CoK8a5qMR2oS8kmCo1IX1mBL8o/S7LAgGJJUXVyVVM1CsyHnQe/J/qy3fi2OdpySD91HdvdBoFtKeKIr96aH/oBj+eEueg8J52fZkJMiIAxSYUKtD9NyPToPhm2G4Ehdj7/qgnwNVbkLE6tnXQWCSdo8i5hEDa5FcnUJLa6tpO6rDvlVx4OtSzWpxKd19DwJpD/XLY/hr7rBgR663PgoDdRPhMQEyEyA2ASh1E3A7o1HzqCun6B0vT9qkSnG1/NVx2tkXnhO4uaZXwEhpTbNlCRwlL2ZgnPzljJ66fAm6r52Ue7KnqPXadGuPpqDG2fa8h7KXemgksqL9Nttl+jvx6/L3e655qC6U6voQl08Lt94SI3X4zgGuYwStW7s6YcqhmXpWp4VGB4cFPFU5muQ6JdSLLeRmQHJGQK5FOTatGUOPb5vBR3tOCk/Vw58+E+0DNKHp/pp71cD9PnZAXkz8eeVj1l58BVR+3EqRMZCYixHr3wMKbWAY90Y5ejmkXZLvN+t/8Af90ByVvzGGa1AAIrfADYWcS7iEFlO1huKZCx6cwE9W7uGPjpTT+19naTiOcm09HagV0d/qnmZCnc/SE++lSGu146BEJAyd2On7kZ+N+R06mTs3PJkULmuc/Py8fP1iVwy1Q4BKRG3HrhyGVm6SCB3xwT0UjYXk6l6Dpmry8nyOr4qN5eK5E3F8meWjQV0du9EodaOhpAEIqMh6MpHMchH0ck3Qu2BAfxH5W3WpN9bx8atn94Uu246BJki4twLEadHrjn3rvUoSVhfSBveNgjlwEhSa0cK9cBI5KGk1aGyj1rvhTa9v2z4WF3j9mv8gpTS2HWFkCx0SYFCillXKADnUoZrmb+GHohh+BgtF/duzSTHPuzO/lBSIaEeGAEZCeeQctdNu5YMu7M/O+XyGeIz+r74eTFrCxv1YRSztgDw8AKKXlugSyAij3b3cIzsFVLahlx6971o0b8/BILBIARCiB4gyTGosXJRwDxfzNSn39nyCbwrAJLzIdCE4SwgJW6IVflav+qGn4F88fhOo7iwF5dvf5AuyHE4QzI/gLwmqGn1wwHzQ4YP+X7/+nAvnNWYB5NLo6ryz0RhqEYBoRYshUjoyVrmayCMOHX9NPHRe2FisIZlXFIy6vkwUmqGn9n5jH8pHsc/7J9H3mvcb4zjJj6ZYY9ck98ZuSZPiazME4geuK7MI+QUW5UjntlhEL2fBkFkKHYpEDKBrtgPWk5uDbC/v9zv///32w3Lz8d39C8T547/o9UOmdNgMKIyVzCRq3MJkSLBlHVT6MsPcGPUBEAowBWvgsYjG/zXVj/hlxXo/yPs2nct/7CgEcFZE7PCX5y2CJLV4X/NbQhfndscsTrXAZwrdsU6B2v8+pQa/2ZlX0C9stdvbdeeYQsXlvnmWOJ8gvS3+emX/8Qg34CI4FH+4cFRwBAQHmxGtMXF+dlsiUMstkQfA4hCPsIU9a0v/p/PGjLkf4p6m3v0pTynAAAAAElFTkSuQmCC" InformativeScreenshot="314e2ca4f26ed635f28126af23a6d6f3.png" Selector="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" Url="https://www.moex.com/ru/derivatives/currency-rate.aspx?currency=JPY_RUB" />
+              </uix:NApplicationCard.TargetApp>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NApplicationCard>
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="513.6,646.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="C:\Users\Галинушка\Desktop\Test.xlsx">
+              <ui:ExcelApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="375.2,536.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ExcelInsertDeleteColumns DisplayName="Insert/Delete Columns" sap:VirtualizedContainerService.HintSize="333.6,188" sap2010:WorkflowViewState.IdRef="ExcelInsertDeleteColumns_1" Mode="Remove" NoColumns="3" Position="4" SheetName="Лист1" />
+                    <ui:ExcelWriteCell Cell="G1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Лист1" Text="Результат" />
+                    <ui:ExcelWriteCell Cell="G2:G24" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Лист1" Text="=B2/E2" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ExcelApplicationScope.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ExcelApplicationScope>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="513.6,478.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="C:\Users\Галинушка\Desktop\Test.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="475.2,208.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:AutoFitX Columns="True" DisplayName="Autofit Range" sap:VirtualizedContainerService.HintSize="433.6,116" sap2010:WorkflowViewState.IdRef="AutoFitX_1" Range="[Excel.Sheet(&quot;Лист1&quot;)]" Rows="True" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ueab:ExcelApplicationCard>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="513.6,860" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" WorkbookPath="C:\Users\Галинушка\Desktop\Test.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="480,590.4" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="438.4,139.2" sap2010:WorkflowViewState.IdRef="FormatRangeX_1" Range="[Excel.Sheet(&quot;Лист1&quot;).Range(&quot;B2:B24&quot;)]">
+                      <ueab:FormatRangeX.Alignment>
+                        <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                      </ueab:FormatRangeX.Alignment>
+                      <ueab:FormatRangeX.Font>
+                        <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" />
+                      </ueab:FormatRangeX.Font>
+                      <ueab:FormatRangeX.Format>
+                        <ueab:CustomFormat FormatAsString="_-* # ##0,0000\ _₽_-;-* # ##0,0000\ _₽_-;_-* &quot;-&quot;????\ _₽_-;_-@_-" />
+                      </ueab:FormatRangeX.Format>
+                    </ueab:FormatRangeX>
+                    <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="438.4,139.2" sap2010:WorkflowViewState.IdRef="FormatRangeX_2" Range="[Excel.Sheet(&quot;Лист1&quot;).Range(&quot;E2:E24&quot;)]">
+                      <ueab:FormatRangeX.Alignment>
+                        <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                      </ueab:FormatRangeX.Alignment>
+                      <ueab:FormatRangeX.Font>
+                        <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" />
+                      </ueab:FormatRangeX.Font>
+                      <ueab:FormatRangeX.Format>
+                        <ueab:CustomFormat FormatAsString="_-* # ##0,0000\ _₽_-;-* # ##0,0000\ _₽_-;_-* &quot;-&quot;????\ _₽_-;_-@_-" />
+                      </ueab:FormatRangeX.Format>
+                    </ueab:FormatRangeX>
+                    <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="438.4,139.2" sap2010:WorkflowViewState.IdRef="FormatRangeX_3" Range="[Excel.Sheet(&quot;Лист1&quot;).Range(&quot;G2:G24&quot;)]">
+                      <ueab:FormatRangeX.Alignment>
+                        <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                      </ueab:FormatRangeX.Alignment>
+                      <ueab:FormatRangeX.Font>
+                        <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" />
+                      </ueab:FormatRangeX.Font>
+                      <ueab:FormatRangeX.Format>
+                        <ueab:CustomFormat FormatAsString="_-* # ##0,0000\ _₽_-;-* # ##0,0000\ _₽_-;_-* &quot;-&quot;????\ _₽_-;_-@_-" />
+                      </ueab:FormatRangeX.Format>
+                    </ueab:FormatRangeX>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ueab:ExcelApplicationCard>
+            <ui:CommentOut DisplayName="Check AutoSum Number Columns" sap:VirtualizedContainerService.HintSize="513.6,147.2" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence sap:VirtualizedContainerService.HintSize="224.8,68.8" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Игнорируемые действия" sap:VirtualizedContainerService.HintSize="375.2,364.8" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:WriteCell Cell="B25" DisplayName="AutoSum" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Лист1" Text="=SUM(B2:B24)" WorkbookPath="C:\Users\Галинушка\Desktop\Test.xlsx" />
+                    <ui:WriteCell Cell="E25" DisplayName="AutoSum" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Лист1" Text="=SUM(E2:E24)" WorkbookPath="C:\Users\Галинушка\Desktop\Test.xlsx" />
+                  </Sequence>
+                  <ui:WriteCell Cell="G25" DisplayName="AutoSum" sap:VirtualizedContainerService.HintSize="375.2,116" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="Лист1" Text="=SUM(G2:G24)" WorkbookPath="C:\Users\Галинушка\Desktop\Test.xlsx" />
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:ReadRange AddHeaders="False" DataTable="[dtExcel]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="513.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Лист1" WorkbookPath="C:\Users\Галинушка\Desktop\Test.xlsx">
+              <ui:ReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ReadRange.Range>
+            </ui:ReadRange>
+            <Assign sap:VirtualizedContainerService.HintSize="513.6,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[countrows]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[dtExcel.rows.Count.ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="513.6,60" sap2010:WorkflowViewState.IdRef="Assign_24">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[numm]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(countrows)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <If Condition="[((numm Mod 10 &lt;&gt; 1) and (numm Mod 10 &lt;&gt; 2) and (numm Mod 10 &lt;&gt; 3) and (numm Mod 10 &lt;&gt;4)) or (numm Mod 100 = 11) or (numm Mod 100 = 12) or (numm Mod 100 = 13) or (numm Mod 100 = 14)]" DisplayName="If sklonenie" sap:VirtualizedContainerService.HintSize="513.6,52.8" sap2010:WorkflowViewState.IdRef="If_14">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_20">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[txt]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">строк в документе Excel</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="693.6,404.8" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[(numm Mod 10 = 2) or (numm Mod 10 = 3) or (numm Mod 10 = 4)]" sap:VirtualizedContainerService.HintSize="652,312" sap2010:WorkflowViewState.IdRef="If_13">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_21">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[txt]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">строки в документе Excel</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_22">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[txt]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">строка в документе Excel</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="513.6,22.4" sap2010:WorkflowViewState.IdRef="GetPassword_2" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxSFIAIhrtEyAPzeMNIDQmAAAAAACAAAAAAAQZgAAAAEAACAAAAAdpMAgtHC7ZEHWEhMv7j+OmMt6/OeP3VFZ88qoHuuPNgAAAAAOgAAAAAIAACAAAACzbG5MdYRAzPM6JsrrfRC8kfWc5X7p690FRqBAWWXtzSAAAADFBfs4KUDSctCus8z1uVgzXCkuMNy2butLu7VU3KrZ9EAAAAAsi1oSJ/4fjuxQLkNUgGnt8TqGS3/0KTjK9Pk/4S8B/bcsimTs+8OdyUd1ldcWIiMPBgjwk8KHkE9q4HQXzHkb" Result="[pwd]" />
+            <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[String.Format(&quot;{0} {1}&quot;, numm, txt.ToString)]" DisplayName="Send SMTP Mail Message" Email="induffer@gmail.com" EnableSSL="True" From="induffer@gmail.com" sap:VirtualizedContainerService.HintSize="513.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[pwd]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Uipath test" To="induffer@gmail.com">
+              <ui:SendMail.Files>
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                  <InArgument x:TypeArguments="x:String">C:\Users\Галинушка\Desktop\Test.xlsx</InArgument>
+                </scg:List>
+              </ui:SendMail.Files>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:SendMail>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+  </Sequence>
+</Activity>

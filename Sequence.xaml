@@ -1,0 +1,491 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" sap:VirtualizedContainerService.HintSize="540.4,3186.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="550.4,3161.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="508.8,3068.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.moex.com">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="475.2,2966.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SVG'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a6ca2f39-81c2-407f-8c7a-62041cd544bc" InformativeScreenshot="cab919b63f2bc38f45b3858c7c36973f" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;span&amp;gt;button&amp;gt;svg' tag='svg' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  /ru/derivatives/'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="48be0cbc-7fc8-46f6-a7f1-9aac40e8f028" InformativeScreenshot="63d1c0469bcd68f67ca8acdec0362505" Selector="&lt;webctrl aaname='Срочный рынок' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a' parentid='redesign-2021' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Срочный рынок — Московская Биржа | Рынки" sap:VirtualizedContainerService.HintSize="433.6,549.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="91767bc3-c5e8-4ec3-933b-d89c103b3cdc" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="333.6,238.4" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" ScopeIdentifier="91767bc3-c5e8-4ec3-933b-d89c103b3cdc" Version="V1">
+                      <uix:NMouseScroll.SearchedElement>
+                        <uix:SearchedElement>
+                          <uix:SearchedElement.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.moex.com/ru/derivatives/" DesignTimeRectangle="224, 836, 249, 38" ElementType="Text" FriendlyName="'Индикативные курсы'" FullSelectorArgument="&lt;webctrl aaname='                                                     Индикативны*' parentid='ctl00_frmLeftMenuWrap' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                                                     Индикативны*' parentid='ctl00_frmLeftMenuWrap' tag='A' type='' class='new-moex-sidebar-menu__link' check:innerText='Индикативные курсы' /&gt;" Guid="ca9f504c-64dd-402a-8460-1c0a04758e4b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAP0AAAAqCAYAAAB4Dl1rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAASXSURBVHhe7Zi7UiMxEEX3m0lJCXAVhMSujfgHHJIRkpAQEpgfINVKasnql2bGu+sxRvdUqbBlPVrd92psfgUAwFDA9AAMBkwPwGDA9AAMBkwPwGDA9AAMBkwPwGDA9AAMBkwPwGDA9AAMBkwPwGDA9AAMBkwPwGDA9AAMBkwPwGDA9AAMxmlN/7kLm6ursH0t7xWvv6/C1e0u7Mt7AMDpOaPp92F3C9MDsDZnM31+ysfPYHoA1uU8pn/dRsNvwkY/6XP/Npjh6YL4LXv3Txu6NFTbPLUrxJsXe8M2jmsx0TcOPi9BlxKLpZyF9tmE3Wfpr99YDp/xVuYvOpezjrkQ/VgpNhaTfm+gHJh1Sj/tPzU/MZ2351wfb41yznzuVguaR83GRfCayzGdvDDy+njAZNY3PeszhfgWpi+izOtx07YxJNAqaD5et380fWlzF9R/Mb06Y82vqJ1gLm+diyXvU2Njl0zJw6Guom51bTXvoJ1OXhhGaxfI3d1deHh4CF9fX6VH8vHxEW5ubsLz83Pp8VnZ9FIIphDHml4U0YrMzmsi6xrJiWH/2dYkOiLzLrmEs2aOLcWiTC/X1H1T+/6L6W3uEmRAWw9iPm+e0WSfv6+8GGoc+jw0l3LdyQvDi+XSeHx8zJq5v783xk+Gv76+zp+/vb2VXp8VTU+F4SY0hTip6ev+WyaWBBeMjdFQzmSfRpGFpq9m2jrxSeFyYSe8MRHX9CVG1to6Kld6fkWZT7IgbyYf+jy2ZoQc59VfUvaPc0Rjc36C6ROe8bnhX15ect8Uq5k+J33uSZBFVgqmmyq6LaIVEBdLe62FpwXjPdlojognNS1EI/ICNz17zePrCVeu1RF3btr00qx00dT1VK6m8h6bOU9mSd7KmHpGnoeMrRnB+2kNO4bjjCm1EPX/AaZPcOO/v78fZfjEKqbf3Hpfz5xCGFEQ0hwJJaaMFVCdJ/ehcdr0XGBSHBN9Yv/InOnz35YHeS4eR4VinR4T0SZ3TC9jVrlScS2Dx1LWdkzVfiLw/Su2ZgSvkTdPw2NptL3jilprF041fm1LDZ9YxfQpKO9pYQqx1PSuuayA8ry0vyg2F1RCCaas3dbxhNkRohtXJJ8rxSKNNW/6ItxD/P4YY3L9PsNjVmfqxT3JXN4qZa/4s8rG5OU2oi4hmQOPidz9UNMnqvGPMXxinSe9EQLxd6Yv4jUFtAIi0+v1aFzX9BESSxWds18517Gm1/3zpi97z1wMtO+06elMNYZerrw5sq8xl7cGrR3bgpr5mqFxIt8i105eyud1To7hh5n+b1nxH3kWU4hZ0xcTpGJOtLpfm8eZN33bpwi4CujQ9D/hCr3zHnOZiX1S4/O8WCN5X2Y2Ey+1FpdjtkiOR8zpGT6xIG+Vrg6KmVUz50s4Z9I15J/lxupjtDYwpzX9f6cj+gPa0OBb0Ln0ar369QSnAKYHJ2aqZjD9Obgw04OLQXwd7/1MgOnPAUwPTsL+dRe2+Xe297UenBOYHoDBgOkBGAyYHoDBgOkBGAyYHoDBgOkBGAyYHoDBgOkBGAyYHoDBgOkBGIoQ/gCM2qBxbEz39QAAAABJRU5ErkJggg==" InformativeScreenshot="6c9c5cf69227d42a5f3b623163d301b8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Срочный рынок — Московская Биржа | Рынки' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                          </uix:SearchedElement.Target>
+                          <uix:SearchedElement.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:SearchedElement.Timeout>
+                        </uix:SearchedElement>
+                      </uix:NMouseScroll.SearchedElement>
+                    </uix:NMouseScroll>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="2b25410be8d717f3839a843b7de68484.png" Selector="&lt;html app='chrome.exe' title='Срочный рынок — Московская Биржа | Рынки' /&gt;" Url="https://www.moex.com/ru/derivatives/" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  /ru/derivatives/curr...'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3da89d00-43ba-4d22-9bcd-05012b610812" InformativeScreenshot="cb88d69d1977b1f3f313b5f9be4aa7ce" Selector="&lt;webctrl aaname='                                                     Индикативны*' parentid='ctl00_frmLeftMenuWrap' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ctl00_PageConte...'" sap:VirtualizedContainerService.HintSize="433.6,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="USD/RUB - Доллар США к российскому рублю">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="32">
+                  <x:String>USD/RUB - Доллар США к российскому рублю</x:String>
+                  <x:String>EUR/RUB - Евро к российскому рублю</x:String>
+                  <x:String>CAD/RUB - Канадский доллар к российскому рублю</x:String>
+                  <x:String>CHF/RUB - Швейцарский франк к российскому рублю</x:String>
+                  <x:String>GBP/RUB - Британский фунт к российскому рублю</x:String>
+                  <x:String>JPY/RUB - Японская йена к российскому рублю</x:String>
+                  <x:String>CNY/RUB - Китайский юань к российскому рублю</x:String>
+                  <x:String>TRY/RUB - Турецкая лира к российскому рублю</x:String>
+                  <x:String>UAH/RUB - Украинская гривна к российскому рублю</x:String>
+                  <x:String>INR/RUB – Индийская рупия к российскому рублю</x:String>
+                  <x:String>HKD/RUB - Гонконгский доллар к российскому рублю</x:String>
+                  <x:String>USD/CAD - Доллар США к канадскому доллару</x:String>
+                  <x:String>USD/CHF - Доллар США к швейцарскому франку</x:String>
+                  <x:String>USD/JPY - Доллар США к японской йене</x:String>
+                  <x:String>USD/CNY - Доллар США к китайскому юаню</x:String>
+                  <x:String>USD/TRY - Доллар США к турецкой лире</x:String>
+                  <x:String>USD/UAH - Доллар США к украинской гривне</x:String>
+                  <x:String>USD/INR - Доллар США к индийской рупии</x:String>
+                  <x:String>USD/HKD - Доллар США к гонконгскому доллару</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="163e410a-cd53-4c83-9ac6-4f3f61fb6144" InformativeScreenshot="2db5e688ddc094e2b359b874bfab5dba" Selector="&lt;webctrl tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  d1day'" sap:VirtualizedContainerService.HintSize="433.6,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="1">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="32">
+                  <x:String>1</x:String>
+                  <x:String>2</x:String>
+                  <x:String>3</x:String>
+                  <x:String>4</x:String>
+                  <x:String>5</x:String>
+                  <x:String>6</x:String>
+                  <x:String>7</x:String>
+                  <x:String>8</x:String>
+                  <x:String>9</x:String>
+                  <x:String>10</x:String>
+                  <x:String>11</x:String>
+                  <x:String>12</x:String>
+                  <x:String>13</x:String>
+                  <x:String>14</x:String>
+                  <x:String>15</x:String>
+                  <x:String>16</x:String>
+                  <x:String>17</x:String>
+                  <x:String>18</x:String>
+                  <x:String>19</x:String>
+                  <x:String>20</x:String>
+                  <x:String>21</x:String>
+                  <x:String>22</x:String>
+                  <x:String>23</x:String>
+                  <x:String>24</x:String>
+                  <x:String>25</x:String>
+                  <x:String>26</x:String>
+                  <x:String>27</x:String>
+                  <x:String>28</x:String>
+                  <x:String>29</x:String>
+                  <x:String>30</x:String>
+                  <x:String>31</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4436d479-a157-43d2-b3af-52d976b38151" InformativeScreenshot="8b680f565abb095ce0c5cc5fed0c00a7" Selector="&lt;webctrl parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  d1day'" sap:VirtualizedContainerService.HintSize="433.6,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_3" Item="Августа">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="16">
+                  <x:String>Января</x:String>
+                  <x:String>Февраля</x:String>
+                  <x:String>Марта</x:String>
+                  <x:String>Апреля</x:String>
+                  <x:String>Мая</x:String>
+                  <x:String>Июня</x:String>
+                  <x:String>Июля</x:String>
+                  <x:String>Августа</x:String>
+                  <x:String>Сентября</x:String>
+                  <x:String>Октября</x:String>
+                  <x:String>Ноября</x:String>
+                  <x:String>Декабря</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4436d479-a157-43d2-b3af-52d976b38151" InformativeScreenshot="ff83cc47ea1b30a1505128841126dae8" Selector="&lt;webctrl parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl id='d1month' tableRow='1' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  d1day'" sap:VirtualizedContainerService.HintSize="433.6,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_4" Item="2022">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="16">
+                  <x:String>2009</x:String>
+                  <x:String>2010</x:String>
+                  <x:String>2011</x:String>
+                  <x:String>2012</x:String>
+                  <x:String>2013</x:String>
+                  <x:String>2014</x:String>
+                  <x:String>2015</x:String>
+                  <x:String>2016</x:String>
+                  <x:String>2017</x:String>
+                  <x:String>2018</x:String>
+                  <x:String>2019</x:String>
+                  <x:String>2020</x:String>
+                  <x:String>2021</x:String>
+                  <x:String>2022</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4436d479-a157-43d2-b3af-52d976b38151" InformativeScreenshot="998070fe4b0a530a5ea8f433a2b7f6b5" Selector="&lt;webctrl parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl id='d1year' tableRow='1' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  d1day'" sap:VirtualizedContainerService.HintSize="433.6,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_5" Item="31">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="32">
+                  <x:String>1</x:String>
+                  <x:String>2</x:String>
+                  <x:String>3</x:String>
+                  <x:String>4</x:String>
+                  <x:String>5</x:String>
+                  <x:String>6</x:String>
+                  <x:String>7</x:String>
+                  <x:String>8</x:String>
+                  <x:String>9</x:String>
+                  <x:String>10</x:String>
+                  <x:String>11</x:String>
+                  <x:String>12</x:String>
+                  <x:String>13</x:String>
+                  <x:String>14</x:String>
+                  <x:String>15</x:String>
+                  <x:String>16</x:String>
+                  <x:String>17</x:String>
+                  <x:String>18</x:String>
+                  <x:String>19</x:String>
+                  <x:String>20</x:String>
+                  <x:String>21</x:String>
+                  <x:String>22</x:String>
+                  <x:String>23</x:String>
+                  <x:String>24</x:String>
+                  <x:String>25</x:String>
+                  <x:String>26</x:String>
+                  <x:String>27</x:String>
+                  <x:String>28</x:String>
+                  <x:String>29</x:String>
+                  <x:String>30</x:String>
+                  <x:String>31</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4436d479-a157-43d2-b3af-52d976b38151" InformativeScreenshot="b9dd980033675b24f4b0f272b64e8b75" Selector="&lt;webctrl idx='2' parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  d1day'" sap:VirtualizedContainerService.HintSize="433.6,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_6" Item="Августа">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="16">
+                  <x:String>Января</x:String>
+                  <x:String>Февраля</x:String>
+                  <x:String>Марта</x:String>
+                  <x:String>Апреля</x:String>
+                  <x:String>Мая</x:String>
+                  <x:String>Июня</x:String>
+                  <x:String>Июля</x:String>
+                  <x:String>Августа</x:String>
+                  <x:String>Сентября</x:String>
+                  <x:String>Октября</x:String>
+                  <x:String>Ноября</x:String>
+                  <x:String>Декабря</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4436d479-a157-43d2-b3af-52d976b38151" InformativeScreenshot="9bfa045755f069dcb5049a729475dc82" Selector="&lt;webctrl idx='2' parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl id='d2month' tableRow='1' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  d1day'" sap:VirtualizedContainerService.HintSize="433.6,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_7" Item="2022">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="16">
+                  <x:String>2009</x:String>
+                  <x:String>2010</x:String>
+                  <x:String>2011</x:String>
+                  <x:String>2012</x:String>
+                  <x:String>2013</x:String>
+                  <x:String>2014</x:String>
+                  <x:String>2015</x:String>
+                  <x:String>2016</x:String>
+                  <x:String>2017</x:String>
+                  <x:String>2018</x:String>
+                  <x:String>2019</x:String>
+                  <x:String>2020</x:String>
+                  <x:String>2021</x:String>
+                  <x:String>2022</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4436d479-a157-43d2-b3af-52d976b38151" InformativeScreenshot="3a6455282c900415ca6abef2ee9362fb" Selector="&lt;webctrl idx='2' parentid='currency-rate-container' tag='TABLE' /&gt;&lt;webctrl id='d2year' tableRow='1' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="258e7d37-b2e1-4506-878d-df06c21c34ce" InformativeScreenshot="10b1fccb0d9f4f3116c1cbeba8068d95" Selector="&lt;webctrl tag='INPUT' type='submit' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Индикативные курсы валют — Московская Биржа | Рынки" sap:VirtualizedContainerService.HintSize="433.6,468.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="ca62c815-4614-4423-9f82-fded7a3c628c" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="375.2,252" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Дата' ReferenceIdx='0' Name='Дата'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Курс промежуточного клиринга Значение' ReferenceIdx='1' Name='Курс промежуточного клиринга Значение' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Курс промежуточного клиринга Время' ReferenceIdx='2' Name='Курс промежуточного клиринга Время' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Курс основного клиринга Значение' ReferenceIdx='3' Name='Курс основного клиринга Значение'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Курс основного клиринга Время' ReferenceIdx='4' Name='Курс основного клиринга Время'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Дата' attr='text' /&gt;&lt;column name='Курс промежуточного клиринга Значение' attr='text' /&gt;&lt;column name='Курс промежуточного клиринга Время' attr='text' /&gt;&lt;column name='Курс основного клиринга Значение' attr='text' /&gt;&lt;column name='Курс основного клиринга Время' attr='text' /&gt;&lt;/extract-table&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_5" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="ca62c815-4614-4423-9f82-fded7a3c628c" Version="V1">
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="832, 469, 546, 719" FriendlyName="'Дата Курс'" FullSelectorArgument="&lt;webctrl aaname='Дата Курс промежуточного клиринга Курс основного клиринга Значен*' parentid='currency-rate-container' tag='TABLE' /&gt;" Guid="1245eec0-c7be-44e8-825f-fa9b35343b3f" InformativeScreenshot="1fee9c094534fa80ade45983cb4a7bf6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                      </uix:NExtractData.Target>
+                    </uix:NExtractData>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="f62a12c0e29192ad2594204a83e11df4.png" Selector="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" Url="https://www.moex.com/ru/derivatives/currency-rate.aspx?currency=USD_RUB" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+  </Sequence>
+</Activity>
